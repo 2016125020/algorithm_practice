@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int findzero(int n){
+	int cnt5=0, cnt2=0;
+	for(int i=2; i<=n; i++){
+		int num = i;
+		while(1){
+				if(num%2==0){
+					cnt2++;
+					num = num/2;
+					//cout << " 2222" << endl;
+					continue;
+				}else	if(num%5==0){
+					cnt5++;
+					num = num/5;
+					//cout << " 5555" << endl;
+					continue;
+				}else{
+					//cout << "end " << endl;
+					break;
+				}
+		}
+	}
+	if(cnt2 > cnt5){
+		return cnt5;
+	}else{
+		return cnt2;
+	}
+}
+			
+
+int main(){
+	int n,m;
+	cin >> n >> m;
+	/*
+	cout << findzero(n) << endl;
+	cout << findzero(m) << endl;*/
+	cout << findzero(n) - findzero(m) - findzero(n-m) << endl;
+}
+	
+

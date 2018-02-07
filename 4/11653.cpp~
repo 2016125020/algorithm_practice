@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int n;
+	cin >> n;
+	int q = n;
+	for(int i=2; i*i<=n; i++){
+		while(q%i == 0){
+			cout << i << "\n";
+			q = q/i;
+		}
+	}
+}
