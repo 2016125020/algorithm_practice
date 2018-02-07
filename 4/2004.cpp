@@ -4,21 +4,12 @@ int findzero(int n){
 	int cnt5=0, cnt2=0;
 	for(int i=2; i<=n; i++){
 		int num = i;
-		while(1){
-				if(num%2==0){
-					cnt2++;
-					num = num/2;
-					//cout << " 2222" << endl;
-					continue;
-				}else	if(num%5==0){
-					cnt5++;
-					num = num/5;
-					//cout << " 5555" << endl;
-					continue;
-				}else{
-					//cout << "end " << endl;
-					break;
-				}
+		while(num % 2 == 0){
+			cnt2++;
+			num = num/2;
+		}while(num % 5 == 0){
+			cnt5++;
+			num = num/5;
 		}
 	}
 	if(cnt2 > cnt5){
